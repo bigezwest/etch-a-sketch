@@ -1,4 +1,6 @@
 "use strict";
+
+
 const body = document.querySelector("body");
 const container = document.querySelector("#container");
 
@@ -12,18 +14,20 @@ newHeader.appendChild(qtyBtn);
 
 
 // Create div's **********************************
-for (let i = 0; i < 240; i++) {
-    const squareDiv = document.createElement("div");
+function createGrid (numSquares) {
+    for (let i = 0; i < numSquares; i++) {
+        const squareDiv = document.createElement("div");
 
-    squareDiv.textContent = "Test"; // Temp
-    squareDiv.className = "squareDiv";
-    const divW = (100 / Math.sqrt(240)) + "vw";
+        squareDiv.textContent = "Test"; // Temp
+        squareDiv.className = "squareDiv";
+        const divW = (100 / Math.sqrt(numSquares)) + "vw";
 
-    squareDiv.style.width = divW;
-    squareDiv.style.height = divW;
-    // squareDiv.style.background = "green"; // Temp
+        squareDiv.style.width = divW;
+        squareDiv.style.height = divW;
+        // squareDiv.style.background = "green"; // Temp
 
-    container.appendChild(squareDiv);
+        container.appendChild(squareDiv);
+    }
 }
 
 // const squares = document.querySelector(".squareDiv");
