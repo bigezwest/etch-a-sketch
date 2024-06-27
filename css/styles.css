@@ -15,4 +15,5 @@ body {
 
 .squareDiv {
     background-color: green;
+    flex-grow: 1;
 }
