@@ -43,5 +43,8 @@ qtyBtn.addEventListener("click", () => {
     let userQty = null;
     do {
         userQty = prompt("Enter the number of squares to use per side of grid (max: 100)");
+        userQty *= userQty;
     } while (isNaN(userQty) || userQty < 0 || userQty > 100);
+
+    createGrid(userQty);
 });
