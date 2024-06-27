@@ -1,4 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+}
+
 #container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.squareDiv {
+    background-color: green;
 }
