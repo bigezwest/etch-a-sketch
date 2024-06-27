@@ -11,7 +11,7 @@ const qtyBtn = document.createElement("button");
 qtyBtn.textContent = "Set new quantity";
 newHeader.appendChild(qtyBtn);
 
-// Create div's **********************************
+// Create div's ****************************************************************
 function createGrid (numSquares) {
     for (let i = 0; i < numSquares; i++) {
         const squareDiv = document.createElement("div");
@@ -35,7 +35,7 @@ function createGrid (numSquares) {
     });
 };
 
-// Event Listener - qtyBtn ********************************
+// Event Listener - qtyBtn *****************************************************
 qtyBtn.addEventListener("click", () => {
     let userQty = null;
     do {
@@ -46,6 +46,7 @@ qtyBtn.addEventListener("click", () => {
     createGrid(userQty);
 });
 
+// clearGrid() *****************************************************************
 function clearGrid(parent) {
     while(parent.lastChild) {
         parent.removeChild(parent.lastChild);
