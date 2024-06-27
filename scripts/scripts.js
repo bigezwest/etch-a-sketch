@@ -16,3 +16,11 @@ for (let i = 0; i < 240; i++) {
 
     container.appendChild(squareDiv);
 }
+
+// const squares = document.querySelector(".squareDiv");
+const squareDiv = document.querySelectorAll("div");
+squareDiv.forEach((div) => {
+    div.addEventListener("mouseover", () => {
+        div.style.backgroundColor = "red";
+    });
+});
