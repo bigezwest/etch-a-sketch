@@ -16,7 +16,7 @@ function createGrid (numSquares) {
     for (let i = 0; i < numSquares; i++) {
         const squareDiv = document.createElement("div");
 
-        squareDiv.textContent = "Test"; // Temp
+        // squareDiv.textContent = "Test"; // Temp
         squareDiv.className = "squareDiv";
         const divW = (100 / Math.sqrt(numSquares)) + "vw";
 
@@ -27,10 +27,10 @@ function createGrid (numSquares) {
         container.appendChild(squareDiv);
     }
     // const squares = document.querySelector(".squareDiv");
-    const squareDiv = document.querySelectorAll("div");
-    squareDiv.forEach((div) => {
-        div.addEventListener("mouseover", () => {
-            div.style.backgroundColor = "red";
+    const squareDiv = document.querySelectorAll(".squareDiv");
+    squareDiv.forEach((squareDiv) => {
+        squareDiv.addEventListener("mouseover", () => {
+            squareDiv.style.backgroundColor = "red";
         });
     });
 };
