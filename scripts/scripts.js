@@ -29,6 +29,7 @@ function createGrid (numSquares) {
     // const squares = document.querySelector(".squareDiv");
     const squareDiv = document.querySelectorAll(".squareDiv");
     squareDiv.forEach((squareDiv) => {
+
         squareDiv.addEventListener("mouseover", () => {
             squareDiv.style.backgroundColor = generateRandColor();
         });
@@ -53,12 +54,9 @@ function clearGrid(parent) {
     }
 }
 
-
-
 // generateRandColor() *********************************************************
 function generateRandColor() {
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
     const b = Math.floor(Math.random() * 256);
-    return `rgba(${r}, ${g}, ${b}, .1)`;
-}
+    return `rgb(${r}, ${g}, ${b})`;}
