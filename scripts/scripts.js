@@ -16,17 +16,14 @@ function createGrid (numSquares) {
     for (let i = 0; i < numSquares; i++) {
         const squareDiv = document.createElement("div");
 
-        // squareDiv.textContent = "Test"; // Temp
         squareDiv.className = "squareDiv";
         const divW = (100 / Math.sqrt(numSquares)) + "vw";
 
         squareDiv.style.width = divW;
         squareDiv.style.height = divW;
-        // squareDiv.style.background = "green"; // Temp
 
         container.appendChild(squareDiv);
     }
-    // const squares = document.querySelector(".squareDiv");
     const squareDiv = document.querySelectorAll(".squareDiv");
     squareDiv.forEach((squareDiv) => {
         squareDiv.style.opacity = 0;
@@ -55,6 +52,7 @@ function clearGrid(parent) {
         parent.removeChild(parent.lastChild);
     }
 }
+
 // generateOpacity() ***********************************************************
 function generateOpacity(item) {
     let style = window.getComputedStyle(item);
@@ -64,7 +62,6 @@ function generateOpacity(item) {
     if (opacity < 1) {
         opacity = opacity + .1;
         opacity = Math.round(opacity * 100) / 100;
-        console.log(opacity);
     }
     return opacity;
 }
@@ -74,4 +71,5 @@ function generateRandColor() {
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
     const b = Math.floor(Math.random() * 256);
-    return `rgb(${r}, ${g}, ${b})`;}
+    return `rgb(${r}, ${g}, ${b})`;
+}
