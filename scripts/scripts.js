@@ -36,5 +36,5 @@ squareDiv.forEach((div) => {
 
 // Event Listener - qtyBtn ********************************
 qtyBtn.addEventListener("click", () => {
-    console.log("qtyBtn click");
+    prompt("Enter a number of squares")
 });
