@@ -11,7 +11,7 @@ qtyBtn.textContent = "Set new quantity";
 newHeader.appendChild(qtyBtn);
 
 
-// Create 16 div's.
+// Create div's **********************************
 for (let i = 0; i < 240; i++) {
     const squareDiv = document.createElement("div");
 
@@ -32,4 +32,9 @@ squareDiv.forEach((div) => {
     div.addEventListener("mouseover", () => {
         div.style.backgroundColor = "red";
     });
+});
+
+// Event Listener - qtyBtn ********************************
+qtyBtn.addEventListener("click", () => {
+    console.log("qtyBtn click");
 });
