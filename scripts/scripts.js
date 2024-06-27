@@ -1,6 +1,15 @@
 "use strict";
-
+const body = document.querySelector("body");
 const container = document.querySelector("#container");
+
+const newHeader = document.createElement("header");
+newHeader.style.height = "5vh";
+body.insertBefore(newHeader, container);
+
+const qtyBtn = document.createElement("button");
+qtyBtn.textContent = "Set new quantity";
+newHeader.appendChild(qtyBtn);
+
 
 // Create 16 div's.
 for (let i = 0; i < 240; i++) {
