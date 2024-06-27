@@ -33,7 +33,7 @@ function createGrid (numSquares) {
             squareDiv.style.backgroundColor = "red";
         });
     });
-};
+}
 
 // Event Listener - qtyBtn *****************************************************
 qtyBtn.addEventListener("click", () => {
@@ -51,4 +51,12 @@ function clearGrid(parent) {
     while(parent.lastChild) {
         parent.removeChild(parent.lastChild);
     }
-};
+}
+
+// generateRandColor() *********************************************************
+function generateRandColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgba(${r}, ${g}, ${b}, .1)`;
+}
