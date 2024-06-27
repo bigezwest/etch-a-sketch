@@ -1,6 +1,5 @@
 "use strict";
 
-
 const body = document.querySelector("body");
 const container = document.querySelector("#container");
 
@@ -11,7 +10,6 @@ body.insertBefore(newHeader, container);
 const qtyBtn = document.createElement("button");
 qtyBtn.textContent = "Set new quantity";
 newHeader.appendChild(qtyBtn);
-
 
 // Create div's **********************************
 function createGrid (numSquares) {
@@ -28,15 +26,14 @@ function createGrid (numSquares) {
 
         container.appendChild(squareDiv);
     }
-}
-
-// const squares = document.querySelector(".squareDiv");
-const squareDiv = document.querySelectorAll("div");
-squareDiv.forEach((div) => {
-    div.addEventListener("mouseover", () => {
-        div.style.backgroundColor = "red";
+    // const squares = document.querySelector(".squareDiv");
+    const squareDiv = document.querySelectorAll("div");
+    squareDiv.forEach((div) => {
+        div.addEventListener("mouseover", () => {
+            div.style.backgroundColor = "red";
+        });
     });
-});
+};
 
 // Event Listener - qtyBtn ********************************
 qtyBtn.addEventListener("click", () => {
