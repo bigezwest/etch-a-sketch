@@ -29,9 +29,11 @@ function createGrid (numSquares) {
     // const squares = document.querySelector(".squareDiv");
     const squareDiv = document.querySelectorAll(".squareDiv");
     squareDiv.forEach((squareDiv) => {
+        squareDiv.style.opacity = 0;
 
         squareDiv.addEventListener("mouseover", () => {
             squareDiv.style.backgroundColor = generateRandColor();
+            squareDiv.style.opacity = generateOpacity(squareDiv);
         });
     });
 }
@@ -52,6 +54,19 @@ function clearGrid(parent) {
     while(parent.lastChild) {
         parent.removeChild(parent.lastChild);
     }
+}
+// generateOpacity() ***********************************************************
+function generateOpacity(item) {
+    let style = window.getComputedStyle(item);
+    let opacity = style.getPropertyValue("opacity");
+    opacity = Number(opacity);
+
+    if (opacity < 1) {
+        opacity = opacity + .1;
+        opacity = Math.round(opacity * 100) / 100;
+        console.log(opacity);
+    }
+    return opacity;
 }
 
 // generateRandColor() *********************************************************
