@@ -13,6 +13,7 @@ newHeader.appendChild(qtyBtn);
 
 // Create div's ****************************************************************
 function createGrid (numSquares) {
+    numSquares *= numSquares;
     for (let i = 0; i < numSquares; i++) {
         const squareDiv = document.createElement("div");
 
@@ -41,7 +42,7 @@ qtyBtn.addEventListener("click", () => {
     do {
         userQty = prompt("Enter the number of squares to use per side of grid (max: 100)");
     } while (isNaN(userQty) || userQty < 0 || userQty > 100);
-    userQty *= userQty;
+
     clearGrid(container);
     createGrid(userQty);
 });
@@ -73,3 +74,5 @@ function generateRandColor() {
     const b = Math.floor(Math.random() * 256);
     return `rgb(${r}, ${g}, ${b})`;
 }
+
+createGrid(16);
